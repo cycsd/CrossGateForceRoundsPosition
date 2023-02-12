@@ -32,11 +32,14 @@ export default function HitOrderControl() {
     `#ff3e00`,
     `#FFFF00`,
     `#FFFFFF`,
+    `#FFFFFF`,
   ]);
 
   const GetColor = (hitOrder) => {
     const index = bullet().findIndex((b) => b >= hitOrder);
-    return bulletColor()[index === -1 || hitOrder == 0 ? 2 : index];
+    return bulletColor()[
+      index === -1 ? 2 :
+        hitOrder == 0 ? 3 : index];
   };
 
   const ChangeColor = (color: string, index: int) => {
@@ -47,30 +50,38 @@ export default function HitOrderControl() {
 
   return (
     <>
-      <For each={newOrder()}>
-        {(ho, i) => (
-          <Show
-            when={i() != 5}
-            fallback={
-              <div style="clear:both">
+      <div style={{ "margin-top": `0%` }}>
+        <For each={newOrder()}>
+          {(ho, i) => (
+            <Show
+              when={i() != 5}
+              fallback={
+                < >
+                  <div style={{ clear: `both`,height:`1%` }}></div>
+                  <div style={{ height: `15%`,width:`18%`, float: `left`, "margin-top": `${10 - (i() % 5) * 2}%` }}>
+                    <Position
+                      color={GetColor(ho.hitOrder)}
+                      hitOrder={ho.hitOrder}
+                      position={ho.position}
+                    />
+                  </div>
+                </>
+
+              }
+            >
+              <div style={{ height: `15%`,width:`18%`, float: `left`, "margin-top": `${10 - (i() % 5) * 2}%` }}>
                 <Position
                   color={GetColor(ho.hitOrder)}
                   hitOrder={ho.hitOrder}
                   position={ho.position}
                 />
               </div>
-            }
-          >
-            <div>
-              <Position
-                color={GetColor(ho.hitOrder)}
-                hitOrder={ho.hitOrder}
-                position={ho.position}
-              />
-            </div>
-          </Show>
-        )}
-      </For>
+            </Show>
+          )}
+        </For>
+      </div>
+      <div style="clear:both;height:50px"></div>
+      <button id="ResetMonster" innerText="怪物重置" onclick={(e)=>setPositionWithoutMonster([])}></button>
       <div style="clear:both">
         <select
           name="bulletLevel"
@@ -90,7 +101,7 @@ export default function HitOrderControl() {
         </select>
       </div>
       <div>
-        <label for="mustHitColor">必中顏色:</label>
+        <label for="mustHitColor">必定擊中顏色:</label>
         <input
           type="color"
           name="mustHitColor"
@@ -99,7 +110,7 @@ export default function HitOrderControl() {
         />
       </div>
       <div>
-        <label for="maybeHitColor">隨機顏色:</label>
+        <label for="maybeHitColor">隨機擊中顏色:</label>
         <input
           type="color"
           name="mustHitColor"
@@ -114,6 +125,15 @@ export default function HitOrderControl() {
           name="mustHitColor"
           value={bulletColor()[2]}
           onInput={(e) => ChangeColor(e.currentTarget.value, 2)}
+        />
+      </div>
+      <div>
+        <label for="notHitColor">無怪獸顏色:</label>
+        <input
+          type="color"
+          name="mustHitColor"
+          value={bulletColor()[3]}
+          onInput={(e) => ChangeColor(e.currentTarget.value, 3)}
         />
       </div>
     </>

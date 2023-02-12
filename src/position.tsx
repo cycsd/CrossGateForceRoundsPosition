@@ -21,11 +21,11 @@ export default function Position(props) {
 
   return (
     <>
-      <div style="float:left">
+      <div>
         <button
           style={{
-            width: `60px`,
-            height: `25px`,
+            width: `70%`,
+            height: `100%`,
             "background-color": props.color,
           }}
           onclick={[resetHitOrder, { position }]}
@@ -33,6 +33,10 @@ export default function Position(props) {
           {hitOrder}
         </button>
         <button
+          style={{
+            width: `30%`,
+            height: `50%`,
+          }}
           onClick={[
             toggleMonsterClick,
             { hasMonster: hitOrder != 0, position: position },
