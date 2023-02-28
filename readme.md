@@ -7,10 +7,11 @@
 開啟方式有以下2種
 1. 熟悉開發端環境的人可以使用自己習慣的開發環境建置起來使用，以visual code為例
 
-2. 為了一般的使用者，我有把tauri產生的主程式一起版控，因此可直接點選exe檔使用
+2. 為了一般的使用者，我有把tauri產生的主程式一起版控，因此可下載下來直接點選exe檔使用就好
 
 使用方式為以下
-1.</br> 在螢幕上選擇氣功彈要擊中的第一個目標，即自動計算氣功彈落點的順序
+1.</br> 
+在螢幕上選擇氣功彈要擊中的第一個目標，即自動計算氣功彈落點的順序
 </br>
 2.</br>
 可依怪物的位置，點選右側的按鈕新增或移除該落點的怪物，如果該位置無怪物，則會自動重新計算新的氣功彈落點順序
@@ -27,5 +28,8 @@
 
 #### 使用環境設定
 ![使用環境設定](https://github.com/cycsd/CrossGateForceRoundsPosition/blob/main/pic/%E6%A0%BC%E9%AC%A5%E6%B0%A3%E5%8A%9F%E5%BD%88%E7%A4%BA%E7%AF%84%E8%A8%AD%E5%AE%9A.gif)
+
+#### 示範
+![示範](https://github.com/cycsd/CrossGateForceRoundsPosition/blob/main/pic/%E6%B0%A3%E5%8A%9F%E5%BD%88%E8%BB%8C%E8%B7%A1%E5%B1%95%E7%A4%BA2.gif)
 
 
