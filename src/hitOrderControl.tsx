@@ -5,7 +5,7 @@ import { useHitOrder } from "./hitOrder";
 export default function HitOrderControl() {
   const [
     newOrder,
-    { hitClick, setPositionWithoutMonster, toggleMonsterClick },
+    { hitClick, setPositionWithoutMonster,clearAllMonster, toggleMonsterClick },
   ] = useHitOrder();
 
   const bulletByLevel = {
@@ -81,7 +81,8 @@ export default function HitOrderControl() {
         </For>
       </div>
       <div style="clear:both;height:50px"></div>
-      <button id="ResetMonster" innerText="怪物重置" onclick={(e)=>setPositionWithoutMonster([])}></button>
+      <button id="ResetMonster" innerText="全選" onclick={(e)=>setPositionWithoutMonster([])}></button>
+      <button id="ClearMonster" innerText="清空" onclick={(e)=>clearAllMonster()}></button>
       <div style="clear:both">
         <select
           name="bulletLevel"

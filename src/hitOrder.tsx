@@ -137,7 +137,7 @@ export function HitOrderProvider(props) {
     { position: 7, hitOrder: 0 },
     { position: 8, hitOrder: 0 },
     { position: 9, hitOrder: 0 },
-    { position: 1, hitOrder: 0 },
+    { position: 10, hitOrder: 0 },
   ]);
 
   const [positionWithoutMonster, setPositionWithoutMonster] = createSignal([
@@ -149,7 +149,7 @@ export function HitOrderProvider(props) {
   }
   const newOrder = () => {
     const psWm = positionWithoutMonster();
-    console.log(psWm);
+    //console.log(psWm);
     return hitOrderByPosition().map((hop, index) =>
       psWm.some((n) => n.position == hop.position)
         ? new HitOrderPosition(hop.position, "0")
@@ -162,7 +162,7 @@ export function HitOrderProvider(props) {
   };
 
   const toggleMonsterClick = (data, event) => {
-    console.log(data);
+    //console.log(data);
     setPositionWithoutMonster((pwm) =>
       data.hasMonster
         ? pwm.concat([
@@ -187,12 +187,16 @@ export function HitOrderProvider(props) {
         .filter((m) => m.position != data.position)
     );
   };
+  const clearAllMonster =()=>{
+    setPositionWithoutMonster(hitOrderByPosition());
+  }
 
   const hitOrder = [
     newOrder,
     {
       resetHitOrder,
       setPositionWithoutMonster,
+      clearAllMonster,
       toggleMonsterClick,
     },
   ];
