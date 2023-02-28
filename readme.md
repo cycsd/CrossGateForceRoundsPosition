@@ -16,7 +16,7 @@
 4.
 當一輪結束，可以點選全選或清空，快速重新設定怪物位置。
 
-![主程式畫面](https://github.com/cycsd/CrossGateForceRoundsPosition/pic/主程式畫面.PNG)
-![使用環境設定](https://github.com/cycsd/CrossGateForceRoundsPosition/pic/格鬥氣功彈示範設定.gif)
+![主程式畫面](https://github.com/cycsd/CrossGateForceRoundsPosition/blob/main/pic/%E4%B8%BB%E7%A8%8B%E5%BC%8F%E7%95%AB%E9%9D%A2.PNG)
+![使用環境設定](https://github.com/cycsd/CrossGateForceRoundsPosition/blob/main/pic/%E6%A0%BC%E9%AC%A5%E6%B0%A3%E5%8A%9F%E5%BD%88%E7%A4%BA%E7%AF%84%E8%A8%AD%E5%AE%9A.gif)
 
 
