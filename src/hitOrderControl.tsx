@@ -31,8 +31,8 @@ export default function HitOrderControl() {
   const [bulletColor, setbulletColor] = createSignal([
     `#ff3e00`,
     `#FFFF00`,
-    `#FFFFFF`,
-    `#FFFFFF`,
+    `#28FF28`,
+    `#000000`,
   ]);
 
   const GetColor = (hitOrder) => {
