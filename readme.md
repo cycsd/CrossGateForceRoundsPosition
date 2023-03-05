@@ -8,7 +8,8 @@
 1. 熟悉開發端環境的人可以使用自己習慣的開發環境建置起來使用，以VS code為例
 ![開發端開啟](https://github.com/cycsd/CrossGateForceRoundsPosition/blob/main/pic/%E5%9F%B7%E8%A1%8Cdev.gif)
 
-2. 為了一般的使用者，我有把tauri產生的主程式一起版控，因此可下載下來直接點選exe檔使用就好
+2. 一般的使用者，可直接在頁面右邊的release連結處下載exe主程式，下載下來直接點選exe檔使用就好~
+![下載處](https://github.com/cycsd/CrossGateForceRoundsPosition/blob/main/pic/Download.PNG)
 ![執行檔開啟](https://github.com/cycsd/CrossGateForceRoundsPosition/blob/main/pic/%E5%9F%B7%E8%A1%8Cexe.gif)
 
 使用方式為以下
