@@ -50,15 +50,15 @@ export default function HitOrderControl() {
 
   return (
     <>
-      <div style={{ "margin-top": `0%` }}>
+      <div style={{height:`60%`, "margin-top": `0%` }}>
         <For each={newOrder()}>
           {(ho, i) => (
             <Show
               when={i() != 5}
               fallback={
-                < >
-                  <div style={{ clear: `both`,height:`1%` }}></div>
-                  <div style={{ height: `15%`,width:`18%`, float: `left`, "margin-top": `${10 - (i() % 5) * 2}%` }}>
+                < >                
+                  <div style={{ height: `30%`,width:`7%`,float:`left`, clear: `left`}}></div>
+                  <div style={{ height: `30%`,width:`15%`, float: `left`,position:`relative`,top:`${46 - ((i() % 5+1)) * 9}%` }}>
                     <Position
                       color={GetColor(ho.hitOrder)}
                       hitOrder={ho.hitOrder}
@@ -69,7 +69,7 @@ export default function HitOrderControl() {
 
               }
             >
-              <div style={{ height: `15%`,width:`18%`, float: `left`, "margin-top": `${10 - (i() % 5) * 2}%` }}>
+              <div style={{ height: `30%`,width:`15%`, float: `left`,position:`relative`,top:`${i()>5?46 - ((i() % 5+1)) * 9:36 - (i() % 5) * 9}%`}}>
                 <Position
                   color={GetColor(ho.hitOrder)}
                   hitOrder={ho.hitOrder}
@@ -80,7 +80,7 @@ export default function HitOrderControl() {
           )}
         </For>
       </div>
-      <div style="clear:both;height:50px"></div>
+      <div style="clear:both;height:1%;"></div>
       <button id="ResetMonster" innerText="全選" onclick={(e)=>setPositionWithoutMonster([])}></button>
       <button id="ClearMonster" innerText="清空" onclick={(e)=>clearAllMonster()}></button>
       <div style="clear:both">

@@ -22,20 +22,24 @@ export default function Position(props) {
   return (
     <>
       <div>
+        <div style={{"border-color":`black`,"border-width":`1px`,}}>
         <button
           style={{
-            width: `70%`,
-            height: `100%`,
+            width: `100%`,
+            height: `80%`,
             "background-color": props.color,
+            "border-width":`1px`,
+            "border-color":`black`,
           }}
           onclick={[resetHitOrder, { position }]}
         >
           {hitOrder}
         </button>
+        </div>
         <button
           style={{
-            width: `30%`,
-            height: `50%`,
+            width: `100%`,
+            height: `20%`,
           }}
           onClick={[
             toggleMonsterClick,
